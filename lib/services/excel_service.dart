@@ -4,7 +4,7 @@ import 'package:excel/excel.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:share_plus/share_plus.dart';
 
-import '../location_model.dart';
+import '../models/location_model.dart';
 
 
 
@@ -30,6 +30,8 @@ class ExcelService {
 
       TextCellValue("نام"),
 
+      TextCellValue("نوع"),
+
       TextCellValue("آدرس"),
 
       TextCellValue("شماره تماس"),
@@ -47,6 +49,9 @@ class ExcelService {
 
 
         TextCellValue(item.name),
+
+
+        TextCellValue(item.type),
 
 
         TextCellValue(item.address),
@@ -122,7 +127,7 @@ class ExcelService {
 
       text:
 
-      "خروجی",
+      "خروجی ثبتینو",
 
     );
 

@@ -1,10 +1,11 @@
-// lib/location_model.dart
+// lib/models/location_model.dart
 
 class LocationData {
 
   final int? id;
 
   final String name;
+  final String type;
   final String address;
   final String phone;
 
@@ -17,10 +18,15 @@ class LocationData {
     this.id,
 
     required this.name,
+
+    required this.type,
+
     required this.address,
+
     required this.phone,
 
     required this.latitude,
+
     required this.longitude,
 
   });
@@ -35,6 +41,8 @@ class LocationData {
         "id": id,
 
       "name": name,
+
+      "type": type,
 
       "address": address,
 
@@ -57,6 +65,8 @@ class LocationData {
       id: map["id"],
 
       name: map["name"] ?? "",
+
+      type: map["type"] ?? "",
 
       address: map["address"] ?? "",
 
